@@ -9,32 +9,47 @@
 </head>
 
 <body>
-  <h1 id="level-title">Press A Key to Start</h1>
+  <audio id="music" autoplay="true" loop="true">
+    <source src="./sounds/Arcade-Kid.mp3">
+  </audio>
+  <div class="fullscreen-video-wrap">
+    <video src="./video/Damage_01.mp4" autoplay="true" loop="true"></video>
+  </div>
+  <div class="video-overlay"></div>
+  <h1 id="level-title">Press Any Key to Start</h1>
   <div class="container">
+
     <div class="row">
-
-      <div type="button" id="green" class="btn green">
-
+      <div 
+        type="button" 
+        id="green" 
+        class="btn green">
       </div>
-
-      <div type="button" id="red" class="btn red">
-
+      <div 
+        type="button" 
+        id="red" 
+        class="btn red">
       </div>
     </div>
 
     <div class="row">
-
-      <div type="button" id="yellow" class="btn yellow">
-
+      <div 
+        type="button" 
+        id="yellow" 
+        class="btn yellow">
       </div>
-      <div type="button" id="blue" class="btn blue">
-
+      <div
+        type="button" 
+        id="blue" 
+        class="btn blue">
       </div>
-
     </div>
 
   </div>
-  
+  <script>
+    var music = document.getElementById("music");
+    music.volume = 0.5;
+  </script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="game.js" charset="utf-8"></script>
 </body>

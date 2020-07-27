@@ -6,7 +6,7 @@ var progress = 0;
 
 $(document).on("keydown", function (){
   if (gameStart === 0){
-    $("#level-title").css("color","#FEF2BF");
+    $("#level-title").css("color","#eebb4d");
     nextSequence();
     gameStart++;
   }

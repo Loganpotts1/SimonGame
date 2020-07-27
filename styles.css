@@ -1,27 +1,50 @@
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
 body {
-  text-align: center;
-  background-color: #011F3F;
+  overflow: hidden;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.fullscreen-video-wrap video{
+  z-index: -99;
+  position: absolute;
+  width: 100vw;
+}
+
+.video-overlay {
+  background: radial-gradient(63.7% 63.7% at 50% 50%, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0.99) 100%);
+  z-index: -50;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
 }
 
 #level-title {
-  font-family: 'Press Start 2P', cursive;
-  font-size: 3rem;
-  margin:  5%;
-  color: #FEF2BF;
+  z-index: 1;
+  color: #eebb4d;
+  display: block;
+  text-align: center;
+  padding-top: 10vh;
+
 }
 
-.container {
-  display: block;
-  width: 50%;
-  margin: auto;
-
+.row {
+  display: flex;
+  justify-content: center;
 }
 
 .btn {
+  z-index: 99;
   margin: 25px;
   display: inline-block;
-  height: 200px;
-  width: 200px;
+  height: 10rem;
+  width: 10rem;
   border: 10px solid black;
   border-radius: 20%;
 }
@@ -32,7 +55,7 @@ body {
 }
 
 .red {
-  background-color: red;
+  background-color: #f0134d;
 }
 
 .green {
@@ -40,11 +63,11 @@ body {
 }
 
 .blue {
-  background-color: blue;
+  background-color: #40bfc1;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: #eebb4d;
 }
 
 .pressed {
